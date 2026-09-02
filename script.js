@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
     updateInfoBox(selected);
   });
 
+  const errorMessages = {
+    name: "Full name is required.",
+    email: "Please enter a valid email address."
+  }
   function updateInfoBox(value) {
     infoBox.textContent = interestInfo[value] || "";
   }
@@ -30,16 +34,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const fullName = document.getElementById("name");
   const email = document.getElementById("email");
-  const requiredFields = [fullName, email];
+  const requiredFields = [fullName];
 
   form.addEventListener("submit", function (e) {
     let valid = true;
     clearErrors();
 
-    if (fullName.value.trim() === "") {
-      showError(fullName, "Full name is required.");
+  requiredFields.forEach(field => {
+    if (field.value.trim() === "") {
+      showError(field, errorMessages [field.id]);
       valid = false;
     }
+  });
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email.value.trim())) {
