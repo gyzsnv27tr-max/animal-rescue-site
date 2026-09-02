@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const fullName = document.getElementById("name");
   const email = document.getElementById("email");
+  const requiredFields = [fullName, email];
 
   form.addEventListener("submit", function (e) {
     let valid = true;
