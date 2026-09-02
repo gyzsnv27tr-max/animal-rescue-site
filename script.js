@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const requiredFields = [fullName];
 
   form.addEventListener("submit", function (e) {
+    e.preventDefault(); // stop real submission every time
     let valid = true;
     clearErrors();
 
@@ -53,8 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
       valid = false;
     }
 
-    if (!valid) {
-      e.preventDefault();
+    if (valid) {
+      alert("Thank you! Your interest has been submitted.");
+      form.reset();
     }
   });
 
