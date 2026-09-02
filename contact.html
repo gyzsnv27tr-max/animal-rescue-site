@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twin Cities Animal Rescue - Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>A Message From Our Director</h2>
+      <video controls width="400">
+        <source src="rescue-message_c.mp4" type="video/mp4">
+        <p>Your browser does not support embedded video. You can view the director's message by <a href="rescue-message_c.mp4">downloading the video file</a>.</p>
+      </video>
+    </section>
+    <section>
+      <h2>Service Area</h2>
+      <p>We serve Minneapolis, St. Paul, and surrounding Twin Cities suburbs.</p>
+      <h2>Office Hours</h2>
+      <p>Monday through Friday, 9:00 AM to 5:00 PM.</p>
+    </section>
+    <section>
+      <h2>Get Involved</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Volunteer or Foster Interest Form</legend>
+          <p>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+          </p>
+          <p>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+          </p>
+          <p>
+            <label for="interest">Interest Type:</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select an option</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="foster">Foster</option>
+              <option value="adoption">Adoption Information</option>
+            </select>
+          </p>
+          <p>
+            <label for="availability">Availability:</label>
+            <input type="text" id="availability" name="availability" pattern="[A-Za-z, ]+" placeholder="e.g., Weekends, Evenings" required>
+          </p>
+          <p>
+            <label for="experience">Experience with Pets:</label>
+            <textarea id="experience" name="experience" rows="3"></textarea>
+          </p>
+          <p>
+            <label for="message">Short Message:</label>
+            <textarea id="message" name="message" rows="4" maxlength="500"></textarea>
+          </p>
+          <p><button type="submit">Submit</button></p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Twin Cities Animal Rescue</p>
+  </footer>
+</body>
+</html>
